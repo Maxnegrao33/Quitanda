@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta author="Maciel Oliveira" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comércio</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <style>
+      body {
+        background-color: rgb(225, 230, 236);
+        font-family: sans-serif;
+      }
+
+      .formulario {
+        background-color: white;
+        width: 400px;
+        padding: 20px;
+        border-radius: 5px;
+        margin: auto;
+        margin-top: 20px;
+        box-shadow: 0px 1px 10px -5px rgba(0, 0, 0, 0.2);
+      }
+
+      .formulario input,
+      .formulario select {
+        display: block;
+        padding: 10px 10px;
+        border: 1px solid gray;
+        margin-bottom: 10px;
+        width: 100%;
+        border-radius: 3px;
+      }
+
+      .formulario button {
+        display: block;
+        padding: 8px 25px;
+        background-color: rgb(53, 129, 250);
+        border: none;
+        border-radius: 20px;
+        color: white;
+        margin: auto;
+        margin-top: 20px;
+      }
+
+      h1 {
+        margin-top: 50px;
+        text-align: center;
+        color: rgb(53, 129, 250);
+        font-size: 50px;
+      }
+
+      fieldset {
+        border: 1px solid gray;
+        padding: 20px 10px;
+        border-radius: 3px;
+        margin-top: 10px;
+      }
+
+      legend {
+        font-weight: bold;
+        background-color: rgb(53, 129, 250);
+        color: white;
+        padding: 5px 20px;
+        border-radius: 20px;
+        margin: auto;
+      }
+    </style>
+    <script>
+      let total = 0;
+
+      function adicionar() {
+        let frutaSelecionada = document.getElementById("fruta").value;
+
+        switch (frutaSelecionada) {
+          case "Acerola":
+            total += 1.5;
+            alert(
+              "Acerola adicionada com sucesso, total da compra é: " + total
+            );
+            break;
+          case "Abacaxi":
+            total += 4.5;
+            alert(
+              "Abacaxi adicionada com sucesso, total da compra é: " + total
+            );
+            break;
+          case "Açai":
+            total += 4;
+            alert("Açai adicionada com sucesso, total da compra é: " + total);
+            break;
+          case "Amora":
+            total += 3.5;
+            alert("Amora adicionada com sucesso, total da compra é: " + total);
+            break;
+          case "Abacate":
+            total += 2.5;
+            alert(
+              "Abacate adicionada com sucesso, total da compra é: " + total
+            );
+            break;
+          case "Banana":
+            total += 2;
+            alert("Banana adicionada com sucesso, total da compra é: " + total);
+            break;
+          case "Caju":
+            total += 3.5;
+            alert("Caju adicionada com sucesso, total da compra é: " + total);
+            break;
+          case "Coco-Verde":
+            total += 4;
+            alert(
+              "Coco-Verde adicionada com sucesso, total da compra é: " + total
+            );
+            break;
+          default:
+            alert("Por gentileza, selecione forma de pagamento");
+            break;
+        }
+      }
+
+      function finalizar() {
+        alert(
+          "Sua compra foi finalizada com sucesso, o total foi de: " +
+            total +
+            "reais"
+        );
+        total = 0;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Quitanda</h1>
+    <form class="formulario">
+      <fieldset>
+        <legend>Cliente</legend>
+        <input type="text" placeholder="Nome Completo" />
+        <input type="email" placeholder="Email" />
+        <input type="number" placeholder="CPF" />
+        <input type="number" placeholder="Telefone" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Frutas</legend>
+        <select name="fruta" id="fruta">
+          <option value=""></option>
+          <option value="acerola">Acerola</option>
+          <option value="abacaxi">Abacaxi</option>
+          <option value="acai">Açaí</option>
+          <option value="amora">Amora</option>
+          <option value="abacate">Abacate</option>
+          <option value="banana">Banana</option>
+          <option value="caju">Cajú</option>
+          <option value="cocoverde">Coco Verde</option>
+          <option value="cacau">Cacau</option>
+          <option value="caja">Cajá</option>
+          <option value="caqui">Caqui</option>
+          <option value="carambola">Carambola</option>
+          <option value="cereja">Cereja</option>
+          <option value="cidra">Cidra</option>
+          <option value="cupuacu">Cupuaçu</option>
+          <option value="damasco">Damasco</option>
+          <option value="framboesa">Framboesa</option>
+          <option value="figo">Figo</option>
+          <option value="goiba">Goiaba</option>
+          <option value="groselha">Groselha</option>
+          <option value="inga">Ingá</option>
+          <option value="jabuticaba">Jabuticaba</option>
+          <option value="jaca">Jaca</option>
+          <option value="jambo">Jambo</option>
+          <option value="jenipapo">Jenipapo</option>
+          <option value="kiwi">Kiwi</option>
+          <option value="laranja">Laranja</option>
+          <option value="limao">Limão</option>
+          <option value="maca">Maçã</option>
+          <option value="marmelo">Marmelo</option>
+          <option value="mamao">Mamão</option>
+          <option value="manga">Manga</option>
+          <option value="mangaba">Mangaba</option>
+          <option value="maracuja">Maracujá</option>
+          <option value="melancia">Melancia</option>
+          <option value="melao">Melão</option>
+          <option value="morango">Morango</option>
+          <option value="pequi">Pequi</option>
+          <option value="pera">Pera</option>
+          <option value="pessego">Pêssego</option>
+          <option value="pitanga">Pitanga</option>
+          <option value="pitaya">Pitaya</option>
+          <option value="pupunha">Pupunha</option>
+          <option value="roma">Romã</option>
+          <option value="siriguela">Siriguela</option>
+          <option value="tamara">Tâmara</option>
+          <option value="tamarindo">Tamarindo</option>
+          <option value="tangerina">Tangerina</option>
+          <option value="tomate">Tomate</option>
+          <option value="tucuma">Tucumã</option>
+          <option value="uva">Uva</option>
+          <option value="umbu">Umbu</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Verduras</legend>
+        <select name="verdura" id="verdura">
+          <option value=""></option>
+          <option value="alface">Alface</option>
+          <option value="almerao">Almerão</option>
+          <option value="brocolis">Brócolis</option>
+          <option value="chicoria">Chicória</option>
+          <option value="alecrim">Alecrim</option>
+          <option value="acelga">Acelga</option>
+          <option value="couve">Couve</option>
+          <option value="couvef">Couve-Flor</option>
+          <option value="cebolinha">Cebolinha</option>
+          <option value="cheirov">Cheiro-Verde</option>
+          <option value="agriao">Agrião</option>
+          <option value="salsao">Salsão</option>
+          <option value="coentro">Coentro</option>
+          <option value="alhoporo">Alho Poró</option>
+          <option value="alfaceamericana">Alface Americana</option>
+          <option value="alfaceroxa">Alface Roxa</option>
+          <option value="aspargo">Aspargo</option>
+          <option value="alcachofra">Alcachofra</option>
+          <option value="espinafre">Espinafre</option>
+          <option value="escarola">Escarola</option>
+          <option value="hortela">Hortelã</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Legumes</legend>
+        <select name="legume" id="legume">
+          <option value=""></option>
+          <option value="abobora">Abóbora</option>
+          <option value="beterraba">Beterraba</option>
+          <option value="beringela">Beringela</option>
+          <option value="batata">Batata Inglesa</option>
+          <option value="batatai">Batatinha</option>
+          <option value="batatad">Batata-Doce</option>
+          <option value="chuchu">Chuchu</option>
+          <option value="cenoura">Cenoura</option>
+          <option value="cebola">Cebola</option>
+          <option value="pimentadoce">Pimenta Doce</option>
+          <option value="pimentaoamarelo">Pimentão Amarelo</option>
+          <option value="pimentaoverde">Pimentão Verde</option>
+          <option value="pimentaovermelho">Pimentão Vermelho</option>
+          <option value="mandiocab">Mandioca Branca</option>
+          <option value="mandiocaa">Mandioca Amarela</option>
+          <option value="vagem">Vagem</option>
+          <option value="repolho">Repolho</option>
+          <option value="repolhoroxo">Repolho Roxo</option>
+          <option value="quiabo">Quiabo</option>
+          <option value="jilo">Jiló</option>
+          <option value="rabanete">Rabanete</option>
+          <option value="nabo">Nabo</option>
+          <option value="milhoverde">Milho Verde</option>
+          <option value="ervilha">Ervilha</option>
+          <option value="abobrinhap">Abobrinha Paulista</option>
+          <option value="moranga">Abóbora Moranga</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Laticínios</legend>
+        <select name="enlatados" id="enlatados">
+          <option value=""></option>
+          <option value="achocolatado">Achocolatado</option>
+          <option value="leiteempo">Leite em Pó</option>
+          <option value="farinhalactea">Farinha Láctea</option>
+          <option value="mucilon">Mucilon</option>
+          <option value="leitenan">Leite Nan</option>
+          <option value="nescau">Achocolatado Nescau</option>
+          <option value="toddy">Achocolatado Toddy</option>
+          <option value="ervilhase">Ervilhas Enlatadas</option>
+          <option value="azeitonav">Azeitonas Verdes</option>
+          <option value="azeitonap">Azeitonas Pretas</option>
+          <option value="milhoe">Milho Enlatado</option>
+          <option value="palmito">Palmito</option>
+          <option value="azeitonassc">Azeitonas sem Caroço</option>
+          <option value="pessegoec">Pêssego em Calda</option>
+          <option value="figoec">Figo em Calda</option>
+          <option value="abacaxiec">Abacaxi em Calda</option>
+          <option value="goiabada">Goiabada</option>
+          <option value="marmelada">Marmelada</option>
+          <option value="leitecondensado">Leite Condensado</option>
+          <option value="cremedeleite">Creme de Leite</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Bebidas</legend>
+        <select name="bebida" id="bebida">
+          <option value=""></option>
+          <option value="aguamineralg">Água Mineral 300ml Garrafa</option>
+          <option value="aguamineralc">Água mineral 300ml Copo</option>
+          <option value="aguamineralgg">Água Mineral 1.5l</option>
+          <option value="aguagasgp">Água com Gás Garrafa 300ml</option>
+          <option value="aguagasgl">Água com Gás Garrafa 1.5l</option>
+          <option value="aguamineralgal">Água Mineral Galão 5l</option>
+          <option value="refirgerantep">Refrigerante 300ml</option>
+          <option value="refrimacap">Refrigerante Maça 300ml</option>
+          <option value="refriuvap">Refrigerante Uva 300ml</option>
+          <option value="refrilaranjap">Refrigerante Laranja 300ml</option>
+          <option value="refrilimaop">Refrigerante Limão 300ml</option>
+          <option value="refricolap">Refrigerante de Cola 300ml</option>
+          <option value="refrigmaca">Refrigerante Maçã Garrafa 600ml</option>
+          <option value="refriguva">Refrigerante Uva Garrafa 600ml</option>
+          <option value="refrigtubaina">
+            Refrigerante Tubaína Garrafa 600ml
+          </option>
+          <option value="refriglaranja">
+            Refrigerante Laranja Garrafa 600ml
+          </option>
+          <option value="refriglimao">Refrigerante Limão Garrafa 600ml</option>
+          <option value="refrigcola">Refrigerante de Cola Garrafa</option>
+          <option value="refriul">Refrigerante 1 litro</option>
+          <option value="refriulmaca">Refrigerante 1 litro Maça</option>
+          <option value="refriuluva">Refrigerante 1 litro Uva</option>
+          <option value="cocacolaul">Coca-Cola 1 litro</option>
+          <option value="cocacoladl">Coca-Cola 2 litros</option>
+        </select>
+      </fieldset>
+      <br />
+      <br />
+      <button onclick="adicionar()">Adicionar ao Carrinho</button>
+      <button onclick="finalizar()">Finalizar Compra</button>
+    </form>
+  </body>
+</html>
